@@ -12,19 +12,21 @@ def func(arr, sums):
             if low == size:
                 break
             if(low > high):
-                
+
                 total = arr[low]
-                high = low 
+                high = low
         else:
             high += 1
             if high == size:
                 break
             total += arr[high]
-        #print(total,low,high)
+        # print(total,low,high)
     if total == sums:
-       return str(low + 1)+" "+ str(high + 1) 
+        return str(low + 1)+" " + str(high + 1)
     return "-1"
+
+
 for test in range(int(input())):
     size, sums = map(int, input().split())
     arr = [int(x) for x in input().split()]
-    print(func(arr,sums))
+    print(func(arr, sums))
